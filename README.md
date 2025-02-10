@@ -71,6 +71,7 @@ So m=
 ```
 
 JSON keys meaning from the TeslaLogger source:
+```
 key d: datetime
 key dict.2: SMTCellTempAvg
 key dict.5: SMTCellMinV
@@ -85,7 +86,7 @@ key dict.43: SMTBatteryPower
 key dict.71: SMTNominalFullPack
 key dict.442: SMTSpeed (if value is 287.6 then Sihnel is not avalible)
 ScanMyTesla sends a lot more data, but TeslaLogger (as of the code state on 2025-02-09) saves only the keys listed above.
-
+```
 
 * The TeslaLogger server (teslalogger.de) stores the data, and according to the ScanMyTesla webpage, "Data will be deleted immediately after being downloaded to your Teslalogger".
   * A TeslaLogger instance sends a POST request with a token to http://teslalogger.de/get_scanmytesla.php, where it probably receives the data in the same format as ScanMyTesla sends.
