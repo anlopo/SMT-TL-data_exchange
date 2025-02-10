@@ -4,7 +4,7 @@ The ScanMyTesla code that sends data was written by the author of TeslaLogger. T
 
 When in ScanMyTesla is TeslaLogger token set:
 * POST request to https://teslalogger.de/check_token.php is send:
-```logfile
+  ```logfile
     Time: 2025-02-09 16:29:40
     IP: 192.168.10.113
     Method: POST
@@ -19,11 +19,11 @@ When in ScanMyTesla is TeslaLogger token set:
 
     Body:
     t=TOKEN
-```
+  ```
 
-    (curl -X POST "https://teslalogger.de/check_token.php" -H "Connection: Keep-Alive" -H "Host: teslalogger.de" -H "User-Agent: Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A310F Build/NRD90M)" -H "Accept-Encoding: identity" -H "Content-Type: application/x-www-form-urlencoded" --data "t=TOKEN")
+  (curl -X POST "https://teslalogger.de/check_token.php" -H "Connection: Keep-Alive" -H "Host: teslalogger.de" -H "User-Agent: Dalvik/2.1.0 (Linux; U; Android 7.0; SM-A310F Build/NRD90M)" -H "Accept-Encoding: identity" -H "Content-Type: application/x-www-form-urlencoded" --data "t=TOKEN")
 
-    token 00000000 can be used for testing, from TeslaLogger source it seem that this token is used for testing
+  The token 00000000 can be used for testing. From the TeslaLogger source, it seems that this token is intended for testing purposes.
 
 * Response can be:
   * "not found"
@@ -84,8 +84,12 @@ key dict.28: SMTBMSmaxCharge
 key dict.29: SMTBMSmaxDischarge
 key dict.43: SMTBatteryPower
 key dict.71: SMTNominalFullPack
-key dict.442: SMTSpeed (if value is 287.6 then Sihnel is not avalible)
+key dict.442: SMTSpeed (if value is 287.6 then speed is not avalible)
+```
 ScanMyTesla sends a lot more data, but TeslaLogger (as of the code state on 2025-02-09) saves only the keys listed above.
+What "IDs" I seen:
+```csv
+1,2,3,4,5,6,7,9,11,13,16,20,23,24,25,27,28,29,43,59,61,64,80,87,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,404,415,426,442,444,445
 ```
 
 * The TeslaLogger server (teslalogger.de) stores the data, and according to the ScanMyTesla webpage, "Data will be deleted immediately after being downloaded to your Teslalogger".
