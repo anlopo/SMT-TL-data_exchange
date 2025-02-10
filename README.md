@@ -1,4 +1,4 @@
-Data exchange between [ScanMyTesla](https://www.scanmytesla.com/) and [TeslaLogger](https://github.com/bassmaster187/TeslaLogger), with example PHP scripts that log the data.
+Data exchange between [ScanMyTesla](https://www.scanmytesla.com/) (v1.9.16) and [TeslaLogger](https://github.com/bassmaster187/TeslaLogger), with example PHP scripts that log the data.
 
 The ScanMyTesla code that sends data was written by the author of TeslaLogger. The author of ScanMyTesla doesn’t want to modify that code, not even to add a text box to change the server where the data is sent.
 
