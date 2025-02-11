@@ -1,6 +1,8 @@
-Data exchange between [ScanMyTesla](https://www.scanmytesla.com/) (v1.9.16) and [TeslaLogger](https://github.com/bassmaster187/TeslaLogger), with example PHP scripts that log the data.
+Data exchange between [ScanMyTesla](https://www.scanmytesla.com/) and [TeslaLogger](https://github.com/bassmaster187/TeslaLogger), with example PHP scripts that log the data.
 
 The ScanMyTesla code that sends data was written by the author of TeslaLogger. The author of ScanMyTesla doesn’t want to modify that code, not even to add a text box to change the server where the data is sent.
+
+(The SMT app v1.x trusts Android user-imported CA certificates. However, the beta version v3.x trusts only system CA certificates, so you need a rooted Android device to install a system CA.)
 
 When in ScanMyTesla is TeslaLogger token set:
 * POST request to https://teslalogger.de/check_token.php is send:
